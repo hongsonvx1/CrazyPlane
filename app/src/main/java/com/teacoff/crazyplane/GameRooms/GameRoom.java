@@ -8,6 +8,7 @@ import com.teacoff.crazyplane.GameComponents.Plane;
 import com.teacoff.crazyplane.GameComponents.Rock;
 import com.teacoff.crazyplane.GameComponents.Smoke;
 import com.teacoff.crazyplane.GameView;
+import com.teacoff.crazyplane.OnGameOverListener;
 import com.teacoff.crazyplane.R;
 
 import java.util.Random;
@@ -50,6 +51,7 @@ public class GameRoom extends Room{
     private int ding, ambiance, bonusound, enginesnd, birdsound, victory;
     private Random rand;
     private Boolean bonusesactive = false;
+    private OnGameOverListener onGameOverListener;
 
     public GameRoom(GameView container){
         super(container);
@@ -482,10 +484,14 @@ public class GameRoom extends Room{
 
                 GameView.gameOver.set();
                 getView().goToRoom(GameView.gameOver);
+                onGameOverListener.onGameOver();
             }
         }
     }
 
+    public void setOnGameOverListener(OnGameOverListener onGameOverListener) {
+        this.onGameOverListener = onGameOverListener;
+    }
 
     public void incrementScore(){
         score++;

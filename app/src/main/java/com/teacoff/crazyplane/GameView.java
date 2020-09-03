@@ -45,6 +45,7 @@ public class GameView extends EngineView{
     public static Graphic victory;
     public static Graphic mute;
     public static Graphic smoke;
+    private OnGameOverListener onGameOverListener;
 
     /**
      * Game View Constructor
@@ -93,6 +94,7 @@ public class GameView extends EngineView{
         difficulty = new DifficultyRoom(this);
         startRoom = new StartRoom(this);
         game = new GameRoom(this);
+        game.setOnGameOverListener(onGameOverListener);
         gameOver = new GameOverRoom(this);
         scoreroom = new ScoreRoom(this);
 
@@ -101,5 +103,9 @@ public class GameView extends EngineView{
 
         // Set room and prepare to rendering
         goToRoom(startRoom);
+    }
+
+    public void setOnGameOverListener(OnGameOverListener onGameOverListener) {
+        this.onGameOverListener = onGameOverListener;
     }
 }

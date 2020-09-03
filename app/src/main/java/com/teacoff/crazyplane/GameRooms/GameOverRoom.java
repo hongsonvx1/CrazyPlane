@@ -1,9 +1,18 @@
 package com.teacoff.crazyplane.GameRooms;
 
 import android.content.SharedPreferences;
+import android.util.Log;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.teacoff.crazyplane.GameComponents.Background;
 import com.teacoff.crazyplane.GameView;
+import com.teacoff.crazyplane.OnGameOverListener;
+import com.teacoff.crazyplane.R;
 
 import ge.xordinate.xengine.EngineView;
 import ge.xordinate.xengine.GameObject;
@@ -29,6 +38,7 @@ public class GameOverRoom extends Room{
     private NumberDisplay score;
     private GameObject gameOver;
     private GameObject goScore;
+    private OnGameOverListener onGameOverListener;
 
     /**
      * GameOverRoom
@@ -92,9 +102,15 @@ public class GameOverRoom extends Room{
             gameOver.width = getWidth() / 2;
             gameOver.height = gameOver.width;
             gameOver.setGraphic(GameView.over, 1);
+//            onGameOverListener.onGameOver();
         }
 
     }
+
+//    public GameOverRoom setOnGameOverListener(OnGameOverListener onGameOverListener) {
+//        this.onGameOverListener = onGameOverListener;
+//        return this;
+//    }
 
     private void manageScore(){
 
