@@ -1,8 +1,8 @@
-package com.teacoff.xplaneflappy.GameComponents;
+package com.teacoff.crazyplane.GameComponents;
 
-import com.teacoff.xplaneflappy.GameRooms.GameRoom;
-import com.teacoff.xplaneflappy.GameView;
-import com.teacoff.xplaneflappy.R;
+import com.teacoff.crazyplane.GameRooms.GameRoom;
+import com.teacoff.crazyplane.GameView;
+import com.teacoff.crazyplane.R;
 
 import ge.xordinate.xengine.GameObject;
 import ge.xordinate.xengine.Room;

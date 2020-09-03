@@ -1,4 +1,4 @@
-package com.teacoff.xplaneflappy;
+package com.teacoff.crazyplane;
 
 import android.content.Context;
 import android.content.pm.ActivityInfo;

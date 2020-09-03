@@ -1,14 +1,14 @@
-package com.teacoff.xplaneflappy.GameRooms;
+package com.teacoff.crazyplane.GameRooms;
 
-import com.teacoff.xplaneflappy.GameActivity;
-import com.teacoff.xplaneflappy.GameComponents.Background;
-import com.teacoff.xplaneflappy.GameComponents.Bird;
-import com.teacoff.xplaneflappy.GameComponents.Bonus;
-import com.teacoff.xplaneflappy.GameComponents.Plane;
-import com.teacoff.xplaneflappy.GameComponents.Rock;
-import com.teacoff.xplaneflappy.GameComponents.Smoke;
-import com.teacoff.xplaneflappy.GameView;
-import com.teacoff.xplaneflappy.R;
+import com.teacoff.crazyplane.GameActivity;
+import com.teacoff.crazyplane.GameComponents.Background;
+import com.teacoff.crazyplane.GameComponents.Bird;
+import com.teacoff.crazyplane.GameComponents.Bonus;
+import com.teacoff.crazyplane.GameComponents.Plane;
+import com.teacoff.crazyplane.GameComponents.Rock;
+import com.teacoff.crazyplane.GameComponents.Smoke;
+import com.teacoff.crazyplane.GameView;
+import com.teacoff.crazyplane.R;
 
 import java.util.Random;
 
