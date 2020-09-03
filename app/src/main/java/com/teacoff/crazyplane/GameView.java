@@ -1,6 +1,7 @@
 package com.teacoff.crazyplane;
 
 import android.content.Context;
+import android.util.AttributeSet;
 
 import com.teacoff.crazyplane.GameRooms.DifficultyRoom;
 import com.teacoff.crazyplane.GameRooms.GameOverRoom;
@@ -50,6 +51,11 @@ public class GameView extends EngineView{
      */
     public GameView(Context context){
         super(context);
+    }
+
+    public GameView(Context context, AttributeSet attrs) {
+
+        super(context, attrs); // This should be first line of constructor
     }
 
     /**

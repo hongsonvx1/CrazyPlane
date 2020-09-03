@@ -30,9 +30,10 @@ public class GameActivity extends EngineActivity{
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         // Initialize gameView
-        gameView = new GameView(this);
-        setContentView(gameView);
-
+//        gameView = new GameView(this);
+        setContentView(R.layout.game_activity);
+//        setContentView(gameView);
+        gameView = findViewById(R.id.game_view);
         // Set screen orientation as portrait
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
