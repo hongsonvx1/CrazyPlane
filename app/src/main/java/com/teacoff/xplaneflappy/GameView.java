@@ -1,12 +1,12 @@
-package com.xordinate.xplaneflappy;
+package com.teacoff.xplaneflappy;
 
 import android.content.Context;
 
-import com.xordinate.xplaneflappy.GameRooms.DifficultyRoom;
-import com.xordinate.xplaneflappy.GameRooms.GameOverRoom;
-import com.xordinate.xplaneflappy.GameRooms.GameRoom;
-import com.xordinate.xplaneflappy.GameRooms.ScoreRoom;
-import com.xordinate.xplaneflappy.GameRooms.StartRoom;
+import com.teacoff.xplaneflappy.GameRooms.DifficultyRoom;
+import com.teacoff.xplaneflappy.GameRooms.GameOverRoom;
+import com.teacoff.xplaneflappy.GameRooms.GameRoom;
+import com.teacoff.xplaneflappy.GameRooms.ScoreRoom;
+import com.teacoff.xplaneflappy.GameRooms.StartRoom;
 
 import javax.microedition.khronos.opengles.GL10;
 

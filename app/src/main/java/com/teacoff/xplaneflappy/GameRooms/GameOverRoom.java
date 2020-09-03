@@ -1,9 +1,9 @@
-package com.xordinate.xplaneflappy.GameRooms;
+package com.teacoff.xplaneflappy.GameRooms;
 
 import android.content.SharedPreferences;
 
-import com.xordinate.xplaneflappy.GameComponents.Background;
-import com.xordinate.xplaneflappy.GameView;
+import com.teacoff.xplaneflappy.GameComponents.Background;
+import com.teacoff.xplaneflappy.GameView;
 
 import ge.xordinate.xengine.EngineView;
 import ge.xordinate.xengine.GameObject;

@@ -1,7 +1,7 @@
-package com.xordinate.xplaneflappy.GameComponents;
+package com.teacoff.xplaneflappy.GameComponents;
 
-import com.xordinate.xplaneflappy.GameView;
-import com.xordinate.xplaneflappy.R;
+import com.teacoff.xplaneflappy.GameView;
+import com.teacoff.xplaneflappy.R;
 
 import ge.xordinate.xengine.GameObject;
 import ge.xordinate.xengine.Graphic;

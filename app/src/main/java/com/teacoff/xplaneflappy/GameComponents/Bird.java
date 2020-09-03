@@ -1,6 +1,6 @@
-package com.xordinate.xplaneflappy.GameComponents;
+package com.teacoff.xplaneflappy.GameComponents;
 
-import com.xordinate.xplaneflappy.GameView;
+import com.teacoff.xplaneflappy.GameView;
 
 import java.util.Random;
 
