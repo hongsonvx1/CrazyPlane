@@ -1,7 +1,5 @@
 package com.teacoff.crazyplane.GameComponents;
 
-import android.util.Log;
-
 import com.teacoff.crazyplane.GameView;
 import com.teacoff.crazyplane.R;
 
@@ -138,13 +136,11 @@ public class Plane extends GameObject{
             player.play(ding);
             GameView.gameOver.set();
             getView().goToRoom(GameView.gameOver);
-            Log.d("my_test", "Game over 1");
         }
         if(y>getRoom().getHeight()){
             player.play(ding);
             GameView.gameOver.set();
             getView().goToRoom(GameView.gameOver);
-            Log.d("my_test", "Game over 2");
         }
     }
 
