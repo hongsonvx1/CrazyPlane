@@ -484,7 +484,7 @@ public class GameRoom extends Room{
 
                 GameView.gameOver.set();
                 getView().goToRoom(GameView.gameOver);
-                onGameOverListener.onGameOver();
+               // onGameOverListener.onGameOver();
             }
         }
     }

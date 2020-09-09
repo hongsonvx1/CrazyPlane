@@ -16,7 +16,7 @@ import ge.xordinate.xengine.Room;
  * <p>
  * Game over menu for end of the game, player can see game scores - user interface
  */
-public class GameOverRoom extends Room{
+public class GameOverRoom extends Room {
     // Variables
     public static final String score_save_name = "score_save";
     public static final String best_score_key = "score";
@@ -39,7 +39,7 @@ public class GameOverRoom extends Room{
      *
      * @param container Engine View
      */
-    public GameOverRoom(EngineView container){
+    public GameOverRoom(EngineView container) {
         super(container);
         xxcon = container;
         play = new GameObject(this);
@@ -55,7 +55,7 @@ public class GameOverRoom extends Room{
     /**
      * Set and initialize game objects and variables
      */
-    public void set(){
+    public void set() {
         play.x = getWidth() * 3 / 4;
         play.y = getHeight() / 4;
         play.width = getWidth() / 4;
@@ -81,34 +81,27 @@ public class GameOverRoom extends Room{
         goScore.frame = 0;
         manageScore();
 
-        if(GameView.game.getScore() == 99){
+        if (GameView.game.getScore() == 99) {
             gameOver.x = getWidth() / 2;
             gameOver.y = getHeight() * 5 / 6;
             gameOver.width = getWidth() / 2;
             gameOver.height = gameOver.width;
             gameOver.setGraphic(GameView.victory, 1);
-        }
-        else{
+        } else {
             gameOver.x = getWidth() / 2;
             gameOver.y = getHeight() * 5 / 6;
             gameOver.width = getWidth() / 2;
             gameOver.height = gameOver.width;
             gameOver.setGraphic(GameView.over, 1);
-//            onGameOverListener.onGameOver();
         }
-
+        onGameOverListener.onGameOver();
     }
 
-//    public GameOverRoom setOnGameOverListener(OnGameOverListener onGameOverListener) {
-//        this.onGameOverListener = onGameOverListener;
-//        return this;
-//    }
-
-    private void manageScore(){
+    private void manageScore() {
 
         SharedPreferences saves = this.getActivity().getSharedPreferences(score_save_name, 0);
         int oldPoints = saves.getInt(best_score_key, 0);
-        if(GameView.game.getScore()>oldPoints){
+        if (GameView.game.getScore() > oldPoints) {
             SharedPreferences.Editor editor = saves.edit();
             editor.putInt(best_score_key, GameView.game.getScore());
 
@@ -118,35 +111,38 @@ public class GameOverRoom extends Room{
     }
 
     @Override
-    public void step(double dt){
-        if(getTouch().objectTouched(play)){
+    public void step(double dt) {
+        if (getTouch().objectTouched(play)) {
             play.frame = 1;
-        }
-        else{
+        } else {
             play.frame = 0;
         }
 
-        if(getTouch().objectTouched(goScore)){
+        if (getTouch().objectTouched(goScore)) {
             goScore.frame = 1;
-        }
-        else{
+        } else {
             goScore.frame = 0;
         }
     }
 
-    public void released(int index){
+    public void released(int index) {
         super.released(index);
 
-        if(getTouch().objectTouched(play)){        // Play button touched
+        if (getTouch().objectTouched(play)) {        // Play button touched
             GameView.difficulty.set();                     // Set up the game room.
             getView().goToRoom(GameView.difficulty);       // Go to the game room.
             play.frame = 0;
         }
 
-        if(getTouch().objectTouched(goScore)){
+        if (getTouch().objectTouched(goScore)) {
             GameView.scoreroom.set();
             getView().goToRoom(GameView.scoreroom);
             goScore.frame = 0;
         }
+    }
+
+    public GameOverRoom setOnGameOverListener(OnGameOverListener onGameOverListener) {
+        this.onGameOverListener = onGameOverListener;
+        return this;
     }
 }

@@ -17,10 +17,10 @@ import ge.xordinate.xengine.Graphic;
 /**
  * GameView
  * <p>
- *  Game view keeps all objects and variables
+ * Game view keeps all objects and variables
  * <p/>
  */
-public class GameView extends EngineView{
+public class GameView extends EngineView {
 
     // Rooms - User interfaces
     public static StartRoom startRoom;
@@ -50,7 +50,7 @@ public class GameView extends EngineView{
     /**
      * Game View Constructor
      */
-    public GameView(Context context){
+    public GameView(Context context) {
         super(context);
     }
 
@@ -63,7 +63,7 @@ public class GameView extends EngineView{
      * Initialize graphics and objects
      */
     @Override
-    protected void onCreateGraphics(){
+    protected void onCreateGraphics() {
         getGraphicsHelper().setParameters(false, GL10.GL_NEAREST, GL10.GL_NEAREST);
         victory = getGraphicsHelper().addGraphic(R.drawable.victory);
         mute = getGraphicsHelper().addGraphic(R.drawable.mute);
@@ -89,13 +89,14 @@ public class GameView extends EngineView{
      * Prepare rooms and set game objects
      */
     @Override
-    protected void onCreateRooms(){
+    protected void onCreateRooms() {
         // Initialize rooms
         difficulty = new DifficultyRoom(this);
         startRoom = new StartRoom(this);
         game = new GameRoom(this);
-        game.setOnGameOverListener(onGameOverListener);
+        // game.setOnGameOverListener(onGameOverListener);
         gameOver = new GameOverRoom(this);
+        gameOver.setOnGameOverListener(onGameOverListener);
         scoreroom = new ScoreRoom(this);
 
         // Set start room

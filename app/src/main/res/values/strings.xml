@@ -6,16 +6,14 @@
     <string name="splashImageDescription">Crazy Plane</string>
 
     <!--    real key-->
-    <!--
    <string name="admob_app_id">ca-app-pub-6074605938883973~2056792948</string>
      <string name="banner_ad_unit_id">ca-app-pub-6074605938883973/6999156102</string>
      <string name="interstitial_ad_unit_id">ca-app-pub-6074605938883973/5936328207</string>
-     -->
 
     <!--    key for test-->
- <!--
- <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
-    -->
+    <!-- -->
+<!--    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>-->
+<!--    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>-->
+    <!-- -->
 </resources>
