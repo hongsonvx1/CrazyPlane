@@ -101,7 +101,7 @@ public class GameActivity extends EngineActivity {
             @Override
             public void onAdFailedToLoad(int errorCode) {
                 // Code to be executed when an ad request fails.
-                loadRewardedAd();
+                //loadRewardedAd();
             }
 
             @Override
