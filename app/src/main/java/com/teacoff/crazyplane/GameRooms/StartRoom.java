@@ -1,10 +1,13 @@
 package com.teacoff.crazyplane.GameRooms;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 
 import com.teacoff.crazyplane.GameActivity;
 import com.teacoff.crazyplane.GameComponents.Background;
 import com.teacoff.crazyplane.GameView;
+import com.teacoff.crazyplane.R;
 
 import ge.xordinate.xengine.EngineView;
 import ge.xordinate.xengine.GameObject;
@@ -29,6 +32,7 @@ public class StartRoom extends Room{
     private GameObject title;
     private GameObject playButton;
     private GameObject scoreButton;
+    private GameObject shareButton;
     private Background bg1;
     private Background bg2;
 
@@ -44,6 +48,7 @@ public class StartRoom extends Room{
         title = new GameObject(this);
         playButton = new GameObject(this);
         scoreButton = new GameObject(this);
+        shareButton = new GameObject(this);
         soundMute = new GameObject(this);
         bg1 = new Background(this);
         bg2 = new Background(this);
@@ -64,10 +69,16 @@ public class StartRoom extends Room{
         playButton.setGraphic(GameView.play, 2);
 
         scoreButton.x = getWidth() / 2;
-        scoreButton.y = getHeight() * 1 / 4;
+        scoreButton.y = getHeight() * 1 / 3;
         scoreButton.width = getWidth() / 3;
         scoreButton.height = scoreButton.width / 2;
         scoreButton.setGraphic(GameView.score, 2);
+
+        shareButton.x = getWidth() / 2;
+        shareButton.y = getHeight() * 1 / 5;
+        shareButton.width = getWidth() / 3;
+        shareButton.height = scoreButton.width / 2;
+        shareButton.setGraphic(GameView.share, 2);
 
         soundMute.x = getWidth() / 2;
         soundMute.y = 0 + soundMute.height;
@@ -125,6 +136,22 @@ public class StartRoom extends Room{
         if(getTouch().objectTouched(soundMute)){
             manageScore();
         }
+
+        if(getTouch().objectTouched(shareButton)){
+            shareGame();
+        }
+    }
+
+    private void shareGame() {
+        Activity activity = getView().getActivity();
+        String shareText = "Game " + activity.getResources().getString(R.string.app_name) + " at ";
+        shareText += "\nhttps://play.google.com/store/apps/details?id=" + activity.getPackageName();
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+        sendIntent.setType("text/plain");
+        activity.startActivity(sendIntent);
     }
 
     private void manageScore(){

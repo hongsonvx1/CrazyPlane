@@ -44,6 +44,7 @@ public class GameView extends EngineView {
     public static Graphic score;
     public static Graphic victory;
     public static Graphic mute;
+    public static Graphic share;
     public static Graphic smoke;
     private OnGameOverListener onGameOverListener;
 
@@ -76,6 +77,7 @@ public class GameView extends EngineView {
         Ufo = getGraphicsHelper().addGraphic(R.drawable.arrow);
         title = getGraphicsHelper().addGraphic(R.drawable.title);
         play = getGraphicsHelper().addGraphic(R.drawable.play);
+        share = getGraphicsHelper().addGraphic(R.drawable.share);
         easy = getGraphicsHelper().addGraphic(R.drawable.easybutton);
         hard = getGraphicsHelper().addGraphic(R.drawable.hardbutton);
         score = getGraphicsHelper().addGraphic(R.drawable.score);
